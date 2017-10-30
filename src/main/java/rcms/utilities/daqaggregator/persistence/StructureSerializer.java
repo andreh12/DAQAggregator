@@ -30,6 +30,7 @@ import rcms.utilities.daqaggregator.data.FRLPc;
 import rcms.utilities.daqaggregator.data.RU;
 import rcms.utilities.daqaggregator.data.SubFEDBuilder;
 import rcms.utilities.daqaggregator.data.SubSystem;
+import rcms.utilities.daqaggregator.data.TCDSGlobalInfo;
 import rcms.utilities.daqaggregator.data.TTCPartition;
 import rcms.utilities.daqaggregator.data.mixin.BUMixIn;
 import rcms.utilities.daqaggregator.data.mixin.BUSummaryMixIn;
@@ -44,6 +45,7 @@ import rcms.utilities.daqaggregator.data.mixin.FRLPcMixIn;
 import rcms.utilities.daqaggregator.data.mixin.RUMixIn;
 import rcms.utilities.daqaggregator.data.mixin.SubFEDBuilderMixIn;
 import rcms.utilities.daqaggregator.data.mixin.SubSystemMixIn;
+import rcms.utilities.daqaggregator.data.mixin.TCDSGlobalInfoMixIn;
 import rcms.utilities.daqaggregator.data.mixin.TTCPartitionMixIn;
 import rcms.utilities.daqaggregator.datasource.Flashlist;
 import rcms.utilities.daqaggregator.datasource.FlashlistMixin;
@@ -259,6 +261,7 @@ public class StructureSerializer {
 		objectMapper.addMixIn(SubFEDBuilder.class, SubFEDBuilderMixIn.class);
 		objectMapper.addMixIn(SubSystem.class, SubSystemMixIn.class);
 		objectMapper.addMixIn(TTCPartition.class, TTCPartitionMixIn.class);
+		objectMapper.addMixIn(TCDSGlobalInfo.class, TCDSGlobalInfoMixIn.class);
 	}
 
 }

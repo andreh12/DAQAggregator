@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import static org.junit.Assert.assertNotNull;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import rcms.utilities.daqaggregator.Application;
 import rcms.utilities.daqaggregator.DAQException;
 import rcms.utilities.daqaggregator.DAQExceptionCode;
@@ -18,11 +19,13 @@ import rcms.utilities.daqaggregator.data.BUSummary;
 import rcms.utilities.daqaggregator.data.DAQ;
 import rcms.utilities.daqaggregator.data.HltInfo;
 import rcms.utilities.daqaggregator.datasource.F3DataRetriever.CpuLoadType;
+import rcms.utilities.daqaggregator.TestWithExternalSystem;
 
 /**
  * Integration test for F3 retrieval: contacts the actual F3 server
  * and checks that the values can be retrieved
  */
+@Category(TestWithExternalSystem.class)
 public class F3DataRetrieverIT {
 	private static final Logger logger = Logger.getLogger(F3DataRetrieverIT.class);
 	
